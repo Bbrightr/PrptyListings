@@ -30,4 +30,4 @@ function getPropertyHtml(properties = [placeholderPropertyObj]) {
     
     }
     
-    document.getElementById('container').innerHTML = getPropertyHtml()
+    document.getElementById('container').innerHTML = getPropertyHtml(propertyForSaleArr)
