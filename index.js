@@ -1,10 +1,11 @@
-import placeholderPropertyObj from "properties/propertyForSaleArr"
-// import propertyForSaleArr from "properties/placeholderPropertyObj"
+import placeholderPropertyObj from './properties/placeholderPropertyObj.js'
+import propertyForSaleArr from './properties/propertyForSaleArr.js'
 
-console.log(propertyForSaleArr)
+// console.log(propertyForSaleArr)
 // console.log(placeholderPropertyObj)
 
-function getPropertyHtml(properties) {
+
+function getPropertyHtml(properties = [placeholderPropertyObj]) {
     return properties.map(property => {
         const {
             propertyLocation,
@@ -25,8 +26,8 @@ function getPropertyHtml(properties) {
                     <h3>${totalRoom} m&sup2;</h3>
                 </div>
             </section> `
-    })
+    }).join(' ')
     
     }
     
-    document.getElementById('container').innerHTML = getPropertyHtml(propertyForSaleArr)
+    document.getElementById('container').innerHTML = getPropertyHtml()
